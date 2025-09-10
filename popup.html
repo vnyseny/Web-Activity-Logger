@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EnquiryID Logger</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body style="width: 500px;">
+  <details class="details-section">
+    <summary class="details-summary">
+      <h2>Monitored Sites</h2>
+    </summary>
+    <div class="details-content">
+      <div class="site-input">
+        <input type="text" id="site-input" placeholder="e.g. example.com">
+        <button id="add-site">Add Site</button>
+      </div>
+      <ul id="site-list"></ul>
+      <div class="status-info">
+        <p id="monitoring-status">No sites monitored - extension is inactive</p>
+      </div>
+    </div>
+  </details>
+  <details class="details-section">
+    <summary class="details-summary">
+      <h2>Parameters</h2>
+    </summary>
+    <div class="details-content">
+      <div class="param-input-section">
+        <div class="param-form">
+          <div class="form-group">
+            <label for="param-input">Parameter Name:</label>
+            <input type="text" id="param-input" placeholder="e.g. enquiryid, userName">
+          </div>
+
+          <div class="form-group">
+            <label for="url-param-checkbox" class="checkbox-label">
+              <input type="checkbox" id="url-param-checkbox" checked>
+              <span class="checkmark"></span>
+              URL Parameter
+            </label>
+          </div>
+
+          <div class="form-group" id="selector-group">
+            <label for="dom-selector-input">CSS Selector:</label>
+            <input type="text" id="dom-selector-input" placeholder="e.g. .username, #user-id">
+          </div>
+
+          <div class="form-actions">
+            <button id="add-param">Add Parameter</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="param-list-section">
+        <h3>Configured Parameters</h3>
+        <ul id="param-list"></ul>
+        <div class="param-info">
+          <p id="param-status">No parameters configured</p>
+        </div>
+      </div>
+    </div>
+  </details>
+  <details class="details-section" open>
+    <summary class="details-summary">
+      <h2>Search Parameters</h2>
+    </summary>
+    <div class="details-content">
+      <div id="search-filter-section">
+      <div class="filter-row">
+        <input type="text" id="search-input" placeholder="Search parameter values...">
+        <div class="multiselect-container">
+          <div class="multiselect-header" id="param-filter-header">
+            <span id="param-filter-text">All Parameters</span>
+            <span class="dropdown-arrow">▼</span>
+          </div>
+          <div class="multiselect-options" id="param-filter-options" style="display: none;">
+            <label class="option-item">
+              <input type="checkbox" value="" id="param-all-checkbox" checked>
+              <span>All Parameters</span>
+            </label>
+          </div>
+        </div>
+        <input type="date" id="date-from">
+        <input type="date" id="date-to">
+        <button id="clear-filters">Clear Filters</button>
+        <div class="export-section">
+          <div class="export-dropdown">
+            <select id="export-dropdown">
+              <option value="">Export ▼</option>
+              <option value="json">Export JSON</option>
+              <option value="csv">Export CSV</option>
+              <option value="excel">Export Excel</option>
+            </select>
+          </div>
+          <div class="export-filters">
+            <label>
+              <input type="checkbox" id="export-with-filters">
+              Export with current filters applied
+            </label>
+          </div>
+        </div>
+        <div class="action-buttons-row">
+          <button id="force-capture">Force Capture DOM</button>
+          <button id="clear-logs">Clear Logs</button>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <!-- Data Grid - Outside of Accordion -->
+  <div class="grid-section">
+    <div class="table-container">
+      <table id="parameter-log-table">
+        <thead id="parameter-log-thead">
+          <tr>
+            <th class="time-column">Time (Local)</th>
+            <!-- Dynamic parameter columns will be added here -->
+          </tr>
+        </thead>
+        <tbody id="parameter-log-tbody">
+          <!-- Dynamic rows will be added here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="status-section">
+    <div id="status-indicator">
+      <span id="extension-status">Extension Status: <span id="status-text">Loading...</span></span>
+    </div>
+  </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
