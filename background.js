@@ -1,4 +1,4 @@
-// Background script for EnquiryID Logger
+// Background script for Web Activity Logger
 
 // Track injected tabs to prevent duplicate injection
 const injectedTabs = new Set();
@@ -112,7 +112,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
 
     if (!enquiryId) {
-      console.log('No enquiryId found in URL, cannot save parameter');
       return;
     }
 
@@ -187,7 +186,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
 
     if (!enquiryId) {
-      console.log('No enquiryId found in URL, cannot save DOM parameter');
       return;
     }
 

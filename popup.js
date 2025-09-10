@@ -1,4 +1,4 @@
-// popup.js for EnquiryID Logger
+// popup.js for Web Activity Logger
 
 document.addEventListener('DOMContentLoaded', () => {
   // Elements

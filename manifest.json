@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "EnquiryID Logger",
+  "name": "Web Activity Logger",
   "version": "1.0.0",
-  "description": "Logs EnquiryID from URL parameters with timestamps.",
+  "description": "Logs web activity including URL parameters, DOM elements, and user interactions with timestamps.",
   "permissions": [
     "storage",
     "tabs",

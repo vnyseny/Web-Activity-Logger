@@ -1,4 +1,4 @@
-/* popup.css for EnquiryID Logger */
+/* popup.css for Web Activity Logger */
 
 body {
   width: 1000px;
@@ -25,9 +25,6 @@ hr {
 }
 
 /* Sites Section Styles */
-#sites-section {
-  margin-bottom: 20px;
-}
 
 .site-input {
   display: flex;
@@ -445,7 +442,7 @@ details[open] .details-summary::after {
   background-color: #bbdefb;
 }
 
-/* EnquiryID Link Styling */
+/* Parameter Link Styling */
 .enquiryid-link {
   color: #2196F3;
   text-decoration: none;

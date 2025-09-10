@@ -1,4 +1,4 @@
-// Content script for EnquiryID Logger - Only runs on monitored sites
+// Content script for Web Activity Logger - Only runs on monitored sites
 
 // Track if script is already initialized to prevent duplicate setup
 let isInitialized = false;
@@ -47,7 +47,6 @@ function monitorDomElements() {
         if (!lastDomValues.has(key)) {
           lastDomValues.set(key, valuesKey);
 
-          console.log(`📝 Empty DOM values captured: ${selectorConfig.paramName} = [""] (no elements found)`);
 
           // Send to background script for logging
           window.postMessage({

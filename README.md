@@ -1,16 +1,19 @@
-# 🌐 Domain URL Logger
+# 🌐 Web Activity Logger
 
-A cross-browser extension for Chrome, Edge, and Firefox that logs URLs and timestamps for user-specified domains. Useful for productivity tracking, research logging, or auditing your web activity.
+A cross-browser extension for Chrome, Edge, and Firefox that logs web activity including URL parameters, DOM elements, and user interactions with timestamps. Useful for productivity tracking, research logging, data collection, or auditing your web activity.
 
 ---
 
 ## Features
-- **Domain Monitoring:** Add/remove domains to monitor (e.g., `wikipedia.org`).
-- **URL & Timestamp Logging:** Automatically logs the full URL and timestamp when you visit a monitored domain.
-- **Recent Logs:** View the last 20 logged entries in the popup.
-- **Export Logs:** Download logs as JSON or CSV.
-- **Clear Logs:** Remove all stored logs with one click.
+- **Site Monitoring:** Add/remove websites to monitor for activity logging.
+- **URL Parameter Tracking:** Automatically capture URL parameters and query strings.
+- **DOM Element Monitoring:** Track changes in specific DOM elements using CSS selectors.
+- **Interactive Data Grid:** View captured data in a sortable, filterable grid.
+- **Advanced Filtering:** Filter by parameters, date ranges, and search terms.
+- **Data Export:** Download data as JSON, CSV, or Excel formats.
+- **Force Capture:** Manually trigger data capture for current page.
 - **Local Storage:** All data is stored locally in your browser.
+- **Real-time Updates:** Automatically captures data as you navigate monitored sites.
 
 ---
 
